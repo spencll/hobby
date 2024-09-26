@@ -7,7 +7,7 @@ import { getFirestore } from 'firebase/firestore';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCHpPvpfc-FYJQvBgkPrd6CQ_5jeJ8jd3w",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "hobby-finder-15e57.firebaseapp.com",
   projectId: "hobby-finder-15e57",
   storageBucket: "hobby-finder-15e57.appspot.com",
