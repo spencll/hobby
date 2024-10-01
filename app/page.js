@@ -78,7 +78,6 @@ const addItem = async (event) => {
     const docRef = doc(collection(db, 'users'), user);
     await setDoc(docRef, { name: user, hobbies: hobbies }, { merge: true });
     await updateInventory();
-    alert('User added/updated successfully');
   } catch (error) {
     console.error('Error adding user: ', error);
     alert('Failed to add user. Please try again.');
@@ -97,7 +96,7 @@ const deleteItem = async(event,userId) =>{
 }
 useEffect(() => {
   updateInventory()
-}, [users])
+}, [])
 
   return (
     <div className={styles.page}>
